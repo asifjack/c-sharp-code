@@ -5,11 +5,11 @@ using System;
         public int id;   
         public String name;  
         public float salary;  
-        public Employee(int i, String n,float s)  
+        public Employee(int id, String name,float salary)  
         {  
-            id = i;  
-            name = n;  
-            salary = s;  
+            this.id = id;  
+            this.name = name;  
+            this.salary = salary;  
         }  
         public void display()  
         {  
