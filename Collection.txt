@@ -1,0 +1,131 @@
+Non-generic                          Generic
+
+ArrayList     ------------->          List
+
+No recommendation  ------------->          HashSet       
+
+HashTable  ------------->          Dictionary
+
+SortedList   ------------->          SortedList  
+
+Stack           ------------->          Stack
+
+Queue         ------------->          Queue
+
+1. Non-Generic (ArrayList)
+
+using System;
+using System.Collections;
+
+public class HelloWorld:Object
+{
+    public static void Main(string[] args)
+    {
+        
+     ArrayList al = new ArrayList();
+     string str = "kiran teja jallepalli";
+     int x = 7;
+     DateTime d = DateTime.Parse("8-oct-1985");
+     al.Add(str);
+     al.Add(x);
+     al.Add(d);
+
+     foreach (object o in al)
+     {
+        Console.WriteLine ("Value "+o);
+     }
+    }
+    //[ "kiran teja jallepalli",7,"8-oct-1985"]
+}
+
+
+1.List
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class HelloWorld:Object
+{
+    public static void Main(string[] args)
+    {
+        
+     List<int> al = new List<int>();
+     int x1 = 1;
+     int x2 = 7;
+     int x3 = 10;
+     al.Add(x1);
+     al.Add(x2);
+     al.Add(x3);
+
+     foreach (int o in al)
+     {
+        Console.WriteLine ("Value "+o);
+     }
+    }
+}
+
+
+
+2) /*********************Hashtable vd Dictionary*****************************************/
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class HelloWorld:Object
+{
+    public static void Main(string[] args)
+    {
+    
+    Hashtable ht = new Hashtable();
+    //ht.add(key,values);
+    ht.Add("ora", 123);
+    ht.Add("vb", true);
+    ht.Add("cs", "cs.net");
+    ht.Add("asp", "asp.net");
+
+    foreach (DictionaryEntry d in ht)
+    {
+        
+       Console.WriteLine (d.Key + " :=> " + d.Value);
+      
+    }
+    
+     /*******Dictionary ***************/
+    Dictionary<string,int> dic = new Dictionary<string,int>();
+    dic.Add("vandana",123);
+    dic.Add("Sonu",121);
+    dic.Add("asif",8898);
+    Console.WriteLine(dic);
+    
+    foreach (KeyValuePair<string,int> kvp in dic)
+    {
+        Console.WriteLine(kvp.Key + " : ==>" + kvp.Value);
+    
+    }
+   
+    }
+}
+
+
+3)
+ //////////*********HashSet*************//////////////
+       HashSet<string> mySet = new HashSet<string>();
+  
+        mySet.Add("DS");
+        mySet.Add("C++");
+        mySet.Add("Java");
+        mySet.Add("JavaScript");
+        mySet.Add("Java");
+  
+       foreach(var val in mySet)
+        {
+            Console.WriteLine(val);
+        }
+
+
+
+
+
+
+
