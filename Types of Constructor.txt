@@ -1,0 +1,103 @@
+CONSTRUCTOR: Constructor is a special method Of Class .
+             Used to Initialize an object 
+             A constructor is invoked at the time of an object creation.
+             Constructor name must be the same as its class name. 
+             A constructor must have no explicit return type.
+
+
+1) Default constructor
+2) Parameterized constructor
+3) Copy constructor
+4) Static constructor
+5) Private constructor
+
+
+1) Default constructor : A constructor without any parameters is called a default constructor.
+                        If we do not create constructor the class will automatically call default
+                        constructor when an object is created.
+
+
+2) Parameter Constructor : A constructor with at least one parameter is called a parametrized constructor.
+    
+    class ParameterConstructor  
+    {  
+        public int FirstNumber;  
+        public int SecondNumber;  
+  
+        public ParameterConstructor(int firstNumber, int secondNumber)  
+        {  
+            FirstNumber = firstNumber;  
+            SecondNumber = secondNumber;  
+        }  
+    }
+  
+3) Copy Constructor :  The constructor which creates an object by copying variables from another object is called a copy constructor.
+                     
+                 public class Employee  
+                 {  
+                    public string firstName;  
+                     public string lastName;
+
+                    // Copy constructor.  
+                   public Employee(Employee employee)  
+                   {  
+                    firstName = employee.firstName;  
+                    lastName  = employee.lastName;  
+                   }   
+                 }
+            Employee emp = new Employee();  
+            Employee emp1 = new Employee(emp);  
+        
+            emp1.firstName = Convert.ToString(Console.ReadLine());  
+            emp1.lastName = Convert.ToString(Console.ReadLine()); 
+
+4) Static Constructor : A static constructor is used to initialize any static data,
+                       or to perform a particular action that needs to be performed once only. 
+                       It is called automatically before the first instance is created or any static members are referenced.
+
+                    #  Characteristic of static constructor
+                       A static constructor does not take any access modifiers.
+                       A static constructor does not have a parameter.
+                       A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+                       A static constructor cannot be called directly.
+                       The user has no control over when the static constructor is executed in the program.
+                       A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.
+                       A class can have only one static constructor.
+                       It can access only static members of a class.
+                     
+                     Example
+                            public class Customer  
+                            {  
+        
+                             public static string discount;  
+                             static Customer()  
+                             {  
+                              discount = 10+"%";  
+                              }   
+                             }  
+
+5)Private Constructor :A private constructor is a special instance constructor.
+                       It is generally used in classes that contain static members only.
+                       If a class has one or more private constructors and no public constructors,
+                       other classes (except nested classes) cannot create instances of this class.
+                       The use of private constructor is to serve singleton classes.
+                       A singleton class is one which limits the number of objects created to one. 
+                       Using private constructor we can ensure that no more than one object can be created at a time
+                       One use of private constructor is when we have the only static member.
+                       It provides the implementation of singleton class pattern.
+                       Once we provide constructor (private/public/any) the compiler will not add the no parameter public constructor to any class.
+Points To Remember :  
+
+It is the implementation of a singleton class pattern.
+use private constructor when we have only static members.
+Using private constructor, prevents the creation of the instances of that class.
+
+           
+           
+
+
+
+
+
+
+
